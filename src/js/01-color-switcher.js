@@ -9,6 +9,7 @@ function btnDisabling(btnOff, btnOn) {
   btnOff.disabled = true;
   btnOn.disabled = false;
 }
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
