@@ -46,14 +46,16 @@ function startTimer(evt) {
     timeLeft = convertMs(timeOut);
     console.log(timeLeft);
     const { days, hours, minutes, seconds } = timeLeft;
-    daysRef.textContent = addLeadingZero(`${days}`);
-    hoursRef.textContent = addLeadingZero(`${hours}`);
-    minutesRef.textContent = addLeadingZero(`${minutes}`);
-    secondsRef.textContent = addLeadingZero(`${seconds}`);
+    createMarkup(days, hours, minutes, seconds);
   }, 1000);
   btnRef.disabled = true;
 }
-
+function createMarkup(days, hours, minutes, seconds) {
+  daysRef.textContent = addLeadingZero(`${days}`);
+  hoursRef.textContent = addLeadingZero(`${hours}`);
+  minutesRef.textContent = addLeadingZero(`${minutes}`);
+  secondsRef.textContent = addLeadingZero(`${seconds}`);
+}
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
